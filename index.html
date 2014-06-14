@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<title>Artist At Work Productions</title>
+	<meta name="description" content="Official website of Artist At Work Productions." />
+	<meta name="keywords"  content="what we do,about,contact,art,music,dance,design" />
+	<meta name="Resource-type" content="Document" />
+ 
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+
+	<style>
+    /* Fixed header 
+	* --------------------------------------- */
+	#header{
+		position:fixed;
+		display:block;
+		width: 100%;
+	    background-color: rgba(255,255,255,0.5);
+		z-index:9;
+		color: black;
+		height: 40px;
+		text-align: center;
+        font-size: 16px;
+        line-height: 23px;
+        vertical-align: middle;
+        top: 0px;
+        padding:10px 0 10px 0;
+    }
+    
+    #header .side-menu{
+    	position: absolute;
+    	height:20px;
+    	width:35px;
+    	cursor:pointer;
+    	top:20px;
+    	right: 20px;
+    	opacity: 1;
+    	right:20px;
+    	transition:right 1s,opacity 0.3s;
+    }
+
+    #header .side-menu:hover{opacity: 0.5;}
+
+	#header span{
+        position: fixed;
+        left:20px;
+        font-family: 'National Light',aliquam,Helvetica;
+        font-weight: bold;
+        font-size: 25px;
+        opacity: 1;
+        transition:opacity 0.3s; 
+        cursor: pointer;
+        top:20px; 
+        color:black;    
+	}
+	#header span:hover{opacity: 0.5;}
+	
+	/* Sections
+		 * --------------------------------------- */
+		#section4 .contact h1{
+			text-align: center;
+		}
+		#section4 .contact p{
+			margin: 0 auto;
+			font-size: 1.5em;
+			text-align: left;
+			padding-left: 5%;
+        }
+        #section4 .contact form{
+        	width:50%;
+        	padding-left: 5%;
+        	text-align: left;
+        }
+		.intro p{
+			width: 50%;
+			margin: 0 auto;
+			font-size: 1.5em;
+		}
+		.join-us{
+			border:1px solid white;
+			padding:15px 20px 15px 20px;
+			position: absolute;
+			bottom:80px;
+			left:40px;
+			cursor: pointer;
+			border-radius: 5px;
+			background-color: none;
+			transition:background-color 0.3s;
+		}
+		.join-us p{color:rgb(255,255,255);}
+		.join-us:hover{background-color: rgba(255,255,255,0.3);}
+
+		
+	</style>
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+		
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+	
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+	<script type="text/javascript" src="js/examples.js"></script>
+	<script type="text/javascript" src="js/snap.svg-min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				slidesColor: ['#000000', '#4BBFC3', '#7BAABE', '#ccddff', 'whitesmoke'],
+				anchors: ['Home', 'About', 'WhatWeDo', 'Initiatives', 'Contact'],
+				menu: '#menu',
+				'scrollOverflow': true
+				
+			});
+			
+		});
+		function contact(){
+	        var formdata=$('#asd').serialize();
+	        $.post('contact.php',formdata,function(data){
+	        if(data=="0"){
+            	$('#contact-error').html('<p style="font-size:15px;color:red;">Enter all details.');
+            }
+            if(data=="-1"){
+            	$('#contact-error').html('<p style="font-size:15px;color:red;">Invalid Email-ID');
+            }
+            if(data=="1"){
+            	$('#contact-error').html('');
+            	$('#asd').html('<p style="font-size:25px;font-family:Aliquam UltraLight;">Thank you for writing to us.');
+            }
+        });
+        }
+	</script>
+
+</head>
+<body>
+<!--************Header*******************-->
+<div id="header">
+	<img src="img/logo6.png" height="50" width="60" alt="Artist At Work" />
+	<a href="#Home"><span>Artist At Work Productions</span></a>
+	<img class="side-menu" src="img/menu-list.png"/>
+</div>
+
+<!--************Side Menu****************-->
+<ul id="menu">
+	<li data-menuanchor="Home"><a href="#Home">Home</a></li><br>
+	<li data-menuanchor="About"><a href="#About">About</a></li><br>
+	<li data-menuanchor="WhatWeDo"><a href="#WhatWeDo">What We Do</a></li><br>
+	<li data-menuanchor="Initiatives"><a href="#Initiatives">Our Initiatives</a></li><br>
+	<li data-menuanchor="Contact"><a href="#Contact">Contact</a></li><br>
+	<img class="menu-logo" src="img/logo6.png"/><br><br><br>
+	<img class="social-icon" src="img/blacktwit.png"/>
+	<img class="social-icon" src="img/blackfb.png"/>
+	<img class="social-icon" src="img/blackutube.png"/><br><br>
+	<span class="menu-contact">contact@aawproductions.com</span><br>
+	<span class="menu-contact">+91 7838088743</span><br>
+	<span class="menu-contact">&copy 2014</span> 
+</ul>
+
+<!--**********************Pages*****************************-->
+<div id="fullpage">
+	
+	<!--SECTION 0: Slide Show-->
+	<div class="section " id="section0">
+		<div id="page">
+        <ul class="cb-slideshow">
+            <li><span>Image 01</span><div><p>We Love Art.</p></div></li>
+            <li><span>Image 02</span><div><p>We Love Dance.</p></div></li>
+            <li><span>Image 03</span><div><p>We Love Music.</p></div></li>
+            <li><span>Image 04</span><div><p>We Love Designing.</p></div></li>
+            <li><span>Image 05</span><div><p>We Love Life.</p></div></li>
+            <li><span>Image 06</span><div><p>We Are Artists At Work.</p></div></li>
+        </ul>
+        <div class="join-us"><p>Join Us</p></div>
+        </div>
+	</div>
+    <!--End Section: End SlideShow-->
+
+
+	<!--SECTION 1: ABOUT-->
+	<div class="section" id="section1">
+		<div class="intro">
+			<h1>Artist At Work Productions</h1>
+			<p>Art is art, in any shape or size. Art is art.<br> The word still doesn't have a pure description.<br>Artist At Work Productions is an organisation that helps you discover your love for art, and sculpt it in unbelievable forms. We work in Graphic Designing, Fine Arts, Dance, Music, Theatre, Photography and anything else that means art to you.<br>
+            Our aim is to provide artists what they need, and artists to those who need them.</p>
+		</div>
+	</div>
+	<!--End Section: About-->
+
+    
+    <!--SECTION 2: What We Do-->
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>What We Do</h1>
+			<p>
+				Designed to fit to different screen sizes as well as tablet and mobile devices.
+				<br /><br /><br /><br /><br /><br />
+			</p>
+		</div>
+	</div>
+    <!--End Section: What We Do-->
+
+    
+    <!--SECTION 3: OUR PROJECTS AND WORK-->
+    <div class="section" id="section3">
+	    
+	    <div class="slide">
+			<div class="intro">
+				<h1>Our Projects and Work</h1><br><br>
+				<p>Art is an embellishment and cannot be alienated from our lives.<br> It is a gift to mankind, and a gift to all.<br> All it takes is a crayon to draw your imagination, some origami to give it life, or just one right chord to hum through the day.</p>
+				<br><br>
+				<p>Slide through to see us in action...</p>
+			</div>
+		</div>
+        
+        <!--*************Begin slide 2*************-->
+	    <div class="slide">
+			<div class="intro">
+				<section id="grid" class="grid clearfix">
+				<a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+					<figure>
+						<img src="img/2.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+						<figcaption>
+							<h2>Crystalline</h2>
+							<p>Soko radicchio bunya nuts gram dulse.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+					<figure>
+						<img src="img/4.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+						<figcaption>
+							<h2>Cacophony</h2>
+							<p>Two greens tigernut soybean radish artichoke.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+					<figure>
+						<img src="img/6.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+						<figcaption>
+							<h2>Languid</h2>
+							<p>Beetroot water spinach okra water chestnut.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+					<figure>
+						<img src="img/8.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+						<figcaption>
+							<h2>Serene</h2>
+							<p>Water spinach arugula pea tatsoi.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+			</section>
+			</div>
+		</div>
+        <!--************End slide 2************-->
+
+	    <!--*************Begin slide 3*************-->
+	    <div class="slide">
+			<div class="intro">
+				<section id="grid" class="grid clearfix">
+				<a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+					<figure>
+						<img src="img/2.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+						<figcaption>
+							<h2>Crystalline</h2>
+							<p>Soko radicchio bunya nuts gram dulse.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+					<figure>
+						<img src="img/4.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+						<figcaption>
+							<h2>Cacophony</h2>
+							<p>Two greens tigernut soybean radish artichoke.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+					<figure>
+						<img src="img/6.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+						<figcaption>
+							<h2>Languid</h2>
+							<p>Beetroot water spinach okra water chestnut.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="#" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+					<figure>
+						<img src="img/8.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+						<figcaption>
+							<h2>Serene</h2>
+							<p>Water spinach arugula pea tatsoi.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+			</section>
+			</div>
+		</div>
+		<!--************End slide 3************-->
+	</div>
+    <!--End Section: OUR PROJECTS AND WORK-->
+    
+
+    <!--SECTION 4: CONTACT-->
+	<div class="section" id="section4">
+		<div class="contact">
+			<h1>Contact Us</h1>
+			<form id="asd" method="post" style="float:right;" >
+				Leave Us A Message<br><br>
+	                <input type="text" name="name" placeholder="Name"><br><br>
+	                <input type="text" name="email" placeholder="Email"><br><br>
+	                <textarea rows="10%" cols="50%" name="message" placeholder="Write Your Message Here!"></textarea><br><br>
+	                <input type="submit" class="btn btn-info" value="Send" onclick="return false;" onmousedown="contact();">
+	                <span id="contact-error"></span>
+            </form>
+                 
+			<p>
+				Support Office : 110, First Floor, Kohat Enclave, Pitampura, New Delhi-110034, Phone :011 45521413
+				<br><br>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3499.547721221819!2d77.132233!3d28.703173!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03d93c80bbe5%3A0x72bda2ab9e286b48!2sPitampura!5e0!3m2!1sen!2sin!4v1402230887289" width="400" height="300" frameborder="0" style="border:0"></iframe>
+				<br>
+			</p>
+		</div>
+	</div>
+	<!--End Section: Contact-->
+    
+
+</div>
+<!--**************************End Pages******************************-->
+<script>
+			(function() {
+	
+				function init() {
+					var speed = 330,
+						easing = mina.backout;
+
+					[].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
+						var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
+							pathConfig = {
+								from : path.attr( 'd' ),
+								to : el.getAttribute( 'data-path-hover' )
+							};
+
+						el.addEventListener( 'mouseenter', function() {
+							path.animate( { 'path' : pathConfig.to }, speed, easing );
+						} );
+
+						el.addEventListener( 'mouseleave', function() {
+							path.animate( { 'path' : pathConfig.from }, speed, easing );
+						} );
+					} );
+				}
+
+				init();
+
+			})();
+		</script>
+</body>
+</html>
