@@ -211,11 +211,7 @@ p{
 		height: 100%;
 		color:white;
 		opacity:1;
-<<<<<<< HEAD
-		background-color: rgba(0,0,0,0.7);
-=======
 		background-color: rgba(0,0,0,0.8);
->>>>>>> b475226ce0a5818402bcb20b57a1290608af9e51
 	    transition:opacity 2s;
 	    }
 	    
