@@ -1,8 +1,8 @@
 $(document).ready(function(){
         $('#fullpage').fullpage({
                                 verticalCentered: true,
-                                slidesColor: ['#000000', '#000000', '#7BAABE', '#ccddff', 'whitesmoke'],
-                                anchors: ['Home', 'About', 'WhatWeDo', 'Initiatives', 'Contact'],
+                                slidesColor: ['#000000', '#000000', '#ccddff', 'whitesmoke','#ccddff', 'whitesmoke'],
+                                anchors: ['Home', 'About', 'WhatWeDo', 'Initiatives','Team', 'Contact'],
                                 menu: '#menu',
                                 afterRender: function(){
                                 

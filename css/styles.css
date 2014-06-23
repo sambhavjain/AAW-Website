@@ -74,7 +74,7 @@ p{
 }
 #menu li {
 	display:inline-block;
-	margin: 10px;
+	margin: 0px;
 	color: #000;
 	/*background:#fff;
 	background: rgba(255,255,255, 0.5);*/
@@ -88,13 +88,16 @@ p{
 }
 #menu li a{
 	text-decoration:none;
-	color: #000;
+	color: gray;
 }
 #menu li.active a:hover{
-	color: #000;
+	color: #fff;
+}
+#menu li a:hover{
+	color: #fff;
 }
 #menu li:hover{
-	background: rgba(255,255,255, 0.8);
+	color:#fff;
 }
 #menu li a,
 #menu li.active a{
@@ -105,21 +108,23 @@ p{
 	color: #fff;
 }
 #menu .social-icon{
-	height:35px;
-	width:35px;
-	margin:5px;
+	height:5%;
+	width:10%;
+	margin:2%;
 	opacity: 1;
+	display: inline-block;
 	transition:opacity 0.3s;
 	cursor: pointer;
+	opacity:0.5;
 }
-#menu .social-icon:hover{opacity: 0.5;}
+#menu .social-icon:hover{opacity: 1;}
 #menu .menu-logo{
 	height:30%;
 	width:70%;
 }
 #menu .menu-contact{
-	color:#fea19f;
-	font-size: 15px;
+	color:gray;
+	font-size: small;
 }
 #menu{
 	position:absolute;
@@ -131,7 +136,7 @@ p{
 	text-align: center;
 	right:-25%;
 	transition:right 1s;
-	background-color: #ff605d;
+	background-color: rgba(253, 255, 120,0.8);
 }
 
 /* Fixed header 
@@ -206,7 +211,7 @@ p{
 		height: 100%;
 		color:white;
 		opacity:1;
-		background-color: rgba(0,0,0,0.5);
+		background-color: rgba(0,0,0,0.7);
 	    transition:opacity 2s;
 	    }
 	    
@@ -225,13 +230,13 @@ p{
 		#section4 .contact h1{
 			text-align: center;
 		}
-		#section4 .contact p{
+		#section5 .contact p{
 			margin: 0 auto;
 			font-size: 1.5em;
 			text-align: left;
 			padding-left: 5%;
         }
-        #section4 .contact form{
+        #section5 .contact form{
         	width:50%;
         	padding-left: 5%;
         	text-align: left;
@@ -265,6 +270,7 @@ p{
             border-radius: 0;
             color: #999;
             display: block;
+            background-color: rgba(255,255,255,0);
             font: 400 1em/1 "Open Sans",sans-serif;
             margin: 0 0 .5em;
             padding: 1em 1.25em;
