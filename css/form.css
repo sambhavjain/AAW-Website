@@ -1,0 +1,323 @@
+/* General Blueprint Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+	font-family: 'bpicons';
+	src:url('../fonts/bpicons/bpicons.eot');
+	src:url('../fonts/bpicons/bpicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/bpicons/bpicons.woff') format('woff'),
+		url('../fonts/bpicons/bpicons.ttf') format('truetype'),
+		url('../fonts/bpicons/bpicons.svg#bpicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+} /* Made with http://icomoon.io/ */
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #fff;
+    font-size: 100%;
+    background:black;
+    margin:0;
+}
+
+a {
+	color: #f0f0f0;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+
+body .container{
+	
+	background-image: url('../img/yo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+ 
+.required,#wrong-number{
+ 	color: #FF0000;
+ }
+
+#error-disp{
+	font-size: 20px;
+	font-style: bold;
+	padding:10px;
+	color:red;
+	box-shadow: 0px 0px 10px gray;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+.container .main{
+	background: rgba(0,0,0,0.8);
+}
+.main .aawist h1{
+	font-size: 400%;
+	font-family: Segoe UI Light,Calibri,sans-serif;
+	margin-top: 100px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+.main .aawist h1 span{
+	font-size: 200%;
+	font-family: chiller,AR CHRISTY,sans-serif;
+}
+.main .aawist h4{
+    font-size: 100%;
+    font-family: Segoe UI Light,'Lato',Calibri,sans-serif;
+    margin:0;
+    text-align: center;
+} 
+.aawist{
+		transition:opacity 1s ease-in;
+		opacity: 0;
+}
+
+.cbp-mc-form {
+	position: relative;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.cbp-mc-form:before, 
+.cbp-mc-form:after { 
+	content: " "; display: table; 
+}
+
+.cbp-mc-form:after { 
+	clear: both; 
+}
+
+.cbp-mc-column {
+	width: 33%;
+	padding: 30px 5% 30px 5%;
+	float: left;
+
+}
+
+.cbp-mc-form label {
+	display: block;
+	padding: 40px 5px 5px 2px;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+.cbp-mc-form input,
+.cbp-mc-form textarea,
+.cbp-mc-form select {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	line-height: 1.5;
+	font-size: 1.4em;
+	padding: 5px 10px;
+	color: #fff;
+	display: block;
+	width: 100%;
+	background: transparent;
+}
+.cbp-mc-form select option{
+	background: rgb(131,131,131);
+}
+.cbp-mc-form input,
+.cbp-mc-form textarea {
+	border: 3px solid #fff;
+}
+
+.cbp-mc-form textarea {
+	min-height: 200px;
+}
+
+.cbp-mc-form input:focus,
+.cbp-mc-form textarea:focus,
+.cbp-mc-form label:active + input,
+.cbp-mc-form label:active + textarea {
+	outline: none;
+	border: 3px solid #10689a;
+}
+
+.cbp-mc-form select:focus {
+	outline: none;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #10689a;
+    font-style: italic;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #10689a;
+    font-style: italic;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #10689a;
+    font-style: italic;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #10689a;
+    font-style: italic;
+}
+
+.cbp-mc-submit-wrap {
+	text-align: center;
+	padding-top: 40px;
+	clear: both;
+}
+
+.cbp-mc-form input.cbp-mc-submit {
+	background: #10689a;
+	border: none;
+	color: #fff;
+	width: auto;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 15px 30px;
+	font-size: 1.1em;
+	border-radius: 2px;
+	letter-spacing: 1px;
+}
+
+.cbp-mc-form input.cbp-mc-submit:hover {
+	background: #1478b1;
+}
+
+/*****
+Side Menu**********************/
+
+#menu li {
+	display:inline-block;
+	margin: 0px;
+	color: #000;
+	
+}
+
+#menu li.active{
+	
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: gray;
+	transition:color 0.3s;
+}
+#menu li.active a:hover{
+	color: #fff;
+}
+#menu li a:hover{
+	color: #fff;
+}
+#menu li:hover{
+	color:#fff;
+}
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu .social-icon{
+	height:5%;
+	width:10%;
+	margin:2%;
+	opacity: 1;
+	display: inline-block;
+	transition:opacity 0.3s;
+	cursor: pointer;
+	opacity:0.5;
+}
+#menu .social-icon:hover{opacity: 1;}
+#menu .menu-logo{
+	height:30%;
+	width:70%;
+}
+#menu .menu-contact{
+	color:gray;
+	font-size: 80%;
+}
+#menu{
+	position:fixed;
+	height: 100%;
+	z-index: 70;
+	width: 25%;
+	padding: 0;
+	display: block;
+	margin:0;
+	padding-top: 5%;
+
+	text-align: center;
+	right:-25%;
+	transition:right 1s;
+	background-color: rgba(0,0,0,0.95);
+}
+
+
+
+/* Fixed header 
+	* --------------------------------------- */
+	a{text-decoration: none;color:inherit;}
+	#header{
+		position:fixed;
+		display:block;
+		width: 100%;
+	    background-color: rgba(255,255,255,0.5);
+		z-index:9;
+		color: black;
+		height: 40px;
+		line-height: 23px;
+        vertical-align: middle;
+        top: 0px;
+        padding:10px 0 10px 0;
+    }
+    
+    #header .side-menu{
+    	position: absolute;
+    	height:20px;
+    	width:35px;
+    	cursor:pointer;
+    	top:20px;
+    	display:block;
+    	right: 20px;
+    	opacity: 1;
+    	right:20px;
+    	transition:right 1s,opacity 0.3s;
+    }
+
+    #header .side-menu:hover{opacity: 0.5;}
+
+	#header span{
+        position: fixed;
+        font-family: 'National Light',aliquam,Helvetica;
+        font-weight: bold;
+        font-size: 25px;
+        opacity: 1;
+        transition:opacity 0.3s; 
+        cursor: pointer;
+        left:60px;
+        top:20px; 
+        color:black;
+        display: block;    
+	}
+	#header span:hover{opacity: 0.5;}
+
+
+@media screen and (max-width: 70em) {
+	.cbp-mc-column {
+		width: 50%;
+	}
+	.cbp-mc-column:nth-child(3) {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 48em) {
+	.cbp-mc-column {
+		width: 100%;
+		padding: 10px;
+	}
+}

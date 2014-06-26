@@ -31,7 +31,7 @@
 .cb-slideshow li div {
     z-index: 1000;
     position: absolute;
-    bottom: 150px;
+    bottom: 20%;
     left: 0px;
     width: 100%;
     text-align: left;
@@ -48,6 +48,7 @@
     padding: 0 30px;
     line-height: 120px;
     color: rgb(255, 255, 255);
+    bottom: 15%;
 }
 .cb-slideshow li:nth-child(1) span { background-image: url(../images/1.jpg) }
 .cb-slideshow li:nth-child(2) span {

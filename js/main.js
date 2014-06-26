@@ -1,6 +1,8 @@
 $(document).ready(function(){
         $('#fullpage').fullpage({
                                 verticalCentered: true,
+                                'scrollOverflow': true,
+                                continuousVertical: true,
                                 slidesColor: ['#000000', '#000000', '#ccddff', 'whitesmoke','#ccddff', 'whitesmoke'],
                                 anchors: ['Home', 'About', 'WhatWeDo', 'Initiatives','Team', 'Contact'],
                                 menu: '#menu',
