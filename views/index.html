@@ -8,23 +8,23 @@
 	<meta name="keywords"  content="what we do,about,contact,art,music,dance,design" />
 	<meta name="Resource-type" content="Document" />
     <!--Stylesheets-->
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="css/slideshow.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="../css/slideshow.css">
 	<!--link rel='stylesheet' type="text/css" media='screen and (min-device-width : 320px) and (max-device-width : 600px)' href='css/mobile.css' /-->
-	<link rel="stylesheet" type="text/css" media='screen and (min-width : 601px)' href="css/styles.css"/>
+	<link rel="stylesheet" type="text/css" media='screen and (min-width : 601px)' href="../css/styles.css"/>
     <!--Scripts-->		
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
-	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
-	<script type="text/javascript" src="js/placeholdem.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="../js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="../js/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="../js/placeholdem.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
 </head>
 <body>
 <!--************Header*******************-->
 <div id="header">
-	<a href="#Home"><img src="img/logo6.png" height="50" width="60" /><span>Artist At Work Productions</span></a>
-	<img class="side-menu" src="img/menu-list.png"/>
+	<a href="#Home"><img src="../img/logo6.png" height="50" width="60" /><span>Artist At Work Productions</span></a>
+	<img class="side-menu" src="../img/menu_icon.svg"/>
 </div>
 
 <!--************Side Menu****************-->
@@ -33,13 +33,13 @@
 	<li data-menuanchor="Home"><a href="#Home">Home</a></li><br>
 	<li data-menuanchor="About"><a href="#About">About</a></li><br>
 	<li data-menuanchor="WhatWeDo"><a href="#WhatWeDo">What We Do</a></li><br>
-	<li data-menuanchor="Initiatives"><a href="#Initiatives">Our Projects and Events</a></li><br>
+	<li data-menuanchor="Initiatives"><a href="#Initiatives">Our Projects and Work</a></li><br>
 	<li data-menuanchor="Team"><a href="#Team">Our Team</a></li><br>
 	<li data-menuanchor="Contact"><a href="#Contact">Contact</a></li><br>
-	<!--img class="menu-logo" src="img/logo6.png"/--><br><br>
-	<img class="social-icon" src="img/twitter.png"/>
-	<img class="social-icon" src="img/facebook.png"/>
-	<img class="social-icon" src="img/youtube.png"/><br>
+	<br><br>
+	<img class="social-icon" src="../img/twitter.png"/>
+	<img class="social-icon" src="../img/facebook.png"/>
+	<img class="social-icon" src="../img/youtube.png"/><br>
 	<span class="menu-contact">contact@aawproductions.com</span><br>
 	<span class="menu-contact">+91 7838088743</span><br>
 	<span class="menu-contact">&copy 2014</span> 
@@ -70,16 +70,17 @@
 
 	<!--SECTION 1: ABOUT-->
 	<div class="section" id="section1">
-		<video autoplay>
-			<source src="img/flowers.mp4" type="video/mp4">
-			<source src="img/flowers.webm" type="video/webm">
+		
+		<video id="video1">
+			<source src="../img/flowers.mp4" type="video/mp4">
+			<source src="../img/flowers.webm" type="video/webm">
 		</video>
+
 		<div class="layer">
 			<div class="intro">
 				<br /><br /><br /><br /><br /><br />
-			  
 			  <p>"Our aim is to provide artists what they need, and artists to those who need them."</p>
-			  <img src="img/play_icon.svg" onclick="playVideo();"/>
+			  <img id="play" src="../img/play_icon.svg" onclick="playVideo();"/>
 		    </div>
 		</div>
 	</div>
@@ -88,29 +89,85 @@
     
     <!--SECTION 2: What We Do-->
 	<div class="section" id="section2">
-		
-		    <div class="intro">
-			    <h1>What We Do</h1>
-			    <p>
-				Designed to fit to different screen sizes as well as tablet and mobile devices.
-				<br /><br /><br /><br /><br /><br />
-			    </p>
-		    </div>
-		
-	</div>
+	 
+	  <div>
+	    <div class="flip"> 
+            <div class="card"> 
+                <div class="face front"> 
+                    Front1
+                </div> 
+                <div class="face back"> 
+                 Back
+                </div> 
+            </div> 
+        </div> 
+        <div class="flip"> 
+            <div class="card"> 
+                <div class="face front"> 
+                    Front2
+                </div> 
+                <div class="face back"> 
+                 Back
+                </div> 
+            </div> 
+        </div> 
+        <div class="flip"> 
+            <div class="card"> 
+                <div class="face front"> 
+                    Front3
+                </div> 
+                <div class="face back"> 
+                 Back
+                </div> 
+            </div> 
+        </div>
+        <br>
+	    <div class="flip"> 
+            <div class="card"> 
+                <div class="face front"> 
+                    Front4
+                </div> 
+                <div class="face back"> 
+                 Back
+                </div> 
+            </div> 
+        </div> 
+        <div class="flip"> 
+            <div class="card"> 
+                <div class="face front"> 
+                    Front5
+                </div> 
+                <div class="face back"> 
+                 Back
+                </div> 
+            </div> 
+        </div> 
+        <div class="flip"> 
+            <div class="card"> 
+                <div class="face front"> 
+                    Front6
+                </div> 
+                <div class="face back"> 
+                 Back
+                </div> 
+            </div> 
+        </div>
+      </div> 
+</div>
     <!--End Section: What We Do-->
 
     
     <!--SECTION 3: OUR PROJECTS AND WORK-->
     <div class="section" id="section3">
-	    
+	   <div class="layer"> 
 	    <div class="intro">
 				<h1>Our Projects and Work</h1><br><br>
 				<p>Art is an embellishment and cannot be alienated from our lives.<br> It is a gift to mankind, and a gift to all.<br> All it takes is a crayon to draw your imagination, some origami to give it life, or just one right chord to hum through the day.</p>
 				<br><br>
-				<div class="work-links"><a href="">Projects</a></div>
-				<div class="work-links"><a href="">Events</a></div>
-				
+				<div class="project"><a href="">Projects</a></div>
+				<div class="events"><a href="">Events</a></div>
+				<div class="movies"><a href="">Movies</a></div>
+		</div>		
 		</div>
 	</div>
     <!--End Section: OUR PROJECTS AND WORK-->
@@ -120,21 +177,7 @@
 	<div class="section" id="section4">
 		<div class="intro">
 			<h1>Our Team</h1>
-			<p>Eu nec ferri molestie consequat, vel at alia dolore putant. Labore philosophia ut vix. In vis nostrud interesset appellantur, vis et tation feugiat scripserit. Te nec noster suavitate persecuti. Diceret erroribus cu vix, alii omnes ei sit. Sea an corrumpit patrioque, virtute accumsan nominavi et usu, ex mei dolore vocibus incorrupte.
 
-Duo ea saperet tacimates. Sed possim prodesset no, per novum putent doctus ea. Eu mea magna aliquip graecis, pri corpora officiis complectitur ei, lorem saepe consetetur his ad. Meis consulatu ei vis, an altera ocurreret interesset qui.
-
-Eu ponderum comprehensam his, case antiopam pri te. Mel ne partem consequat instructior. Ad dicunt malorum sea, ex qui omnes invenire gubergren. Ius cu autem aliquando, pri vide ornatus perpetua an, no has epicuri verterem. Nam at animal pertinax efficiantur.
-
-Per alienum torquatos eu. Sed saepe quodsi et, ullum choro definitionem sed et. Ullum elitr comprehensam sed at, sint illum propriae per eu. Eu enim laudem reformidans vel. Pro clita quando ad. Usu te virtute quaestio, ut eruditi tacimates volutpat per.
-
-Affert accusamus duo ex, ea pri habeo graece, cu magna dolorum sea. Quas dictas assueverit ad qui, cu duo harum fabulas apeirian, ullum gubergren et sit. Ne cetero recusabo adipiscing quo, cu harum quaestio neglegentur cum. Has tation aliquip ad, virtute volumus definitionem mel ne. Nobis audiam civibus ius at.
-
-Ei eum hinc mutat inciderint. Cu maluisset assentior per, graecis ponderum no mel. Eum eu vitae quando gloriatur, cum graece percipitur no, sed errem maiestatis te. Sed porro epicuri te, ad nam malorum verterem. Ea zril aliquip euismod sed.
-
-
-      
-	  </p>
 		</div>
 	</div>
 	<!--End Section: TEAM-->
@@ -142,7 +185,7 @@ Ei eum hinc mutat inciderint. Cu maluisset assentior per, graecis ponderum no me
     <div class="section" id="section5">    
         <div class="contact">
 			<h1>Contact Us</h1>
-			<form id="asd" method="post" style="float:right;" >
+			<form id="contact-us" method="post">
 				<p>Leave Us A Message</p><br>
 	                <input type="text" name="name" placeholder="Name">
 	                <input type="text" name="email" placeholder="Email">
