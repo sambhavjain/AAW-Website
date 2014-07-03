@@ -25,20 +25,16 @@ class Contact extends Validate{
     }
 
     public function save(){
-        require_once "../lib/PHPMailerAutoload.php";
-        $mail = new PHPMailer;
-
-        $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = 'smtp.aawproductions.com';  // Specify main and backup SMTP servers
-        $mail->SMTPAuth = false;
-        $mail->From = 'contact@aawproductions.com';
-        $mail->FromName = 'Admin';
-        $mail->addAddress('shubhanksrivastava94@gmail.com', 'Shubhank');
-        $mail->WordWrap = 50;
-        $mail->Subject = 'Contact Us Query';
-        $mail->Body    =  $this->name.' says on '.date("F j, Y, g:i a").' '.$this->message;
+        require_once('../lib/class.phpmailer.php');
+        $mail = new PHPMailer();
+        $body = $this->name.'('.$this->email.')'.' says '.$this->message;
+        $mail->SetFrom('contact@aawproductions.com', $this->name);
+        $address = "contact@aawproductions.com";
+        $mail->AddAddress($address, "Management Team");
+        $mail->Subject = "Contact Us Query";
+        $mail->MsgHTML($body);
         
-        if(!$mail->send()) {
+        if(!$mail->Send()) {
             return 0;
         } else {
             return 1;
