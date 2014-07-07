@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" > 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Join Us - Artist At Work Productions</title>
+		<meta name="description" content="Join Artist At Work Productions" />
+		
+		<link rel="stylesheet" type="text/css" href="../css/form.css" />
+		<link rel="stylesheet" type="text/css" href="../css/radio-check.css" />
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="../js/modernizr.custom.js"></script>
+		<script src="../js/joinus.js"></script>
+	</head>
+<body>
+		
+<div id="header">
+	<a href="index.html#Home"><img src="../img/logo6.png" height="50" width="60" /><span>Artist At Work Productions</span></a>
+	<img class="side-menu" src="../img/menu_icon.svg"/>
+</div>
+<ul id="menu">
+	
+	<li><a href="index.html#Home">Home</a></li><br>
+	<li><a href="index.html#About">About</a></li><br>
+	<li><a href="index.html#WhatWeDo">What We Do</a></li><br>
+	<li><a href="index.html#Initiatives">Our Projects and Work</a></li><br>
+	<li><a href="index.html#Team">Our Team</a></li><br>
+	<li><a href="index.html#Contact">Contact</a></li><br>
+	<br><br>
+	<img class="social-icon" src="../img/twitter.png"/>
+	<img class="social-icon" src="../img/facebook.png"/>
+	<img class="social-icon" src="../img/youtube.png"/><br>
+	<span class="menu-contact">contact@aawproductions.com</span><br>
+	<span class="menu-contact">+91 7838088743</span><br>
+	<span class="menu-contact">&copy 2014</span> 
+    
+</ul>
+		
+
+		<div class="container">
+			
+			<div class="main">
+				<form class="cbp-mc-form"  method="POST">
+					<div class="aawist">
+						<h1>Become An <span>AAW'ist</span>, Join Us</h1>
+						<h4>Working with a StartUp is no less than owning it, making you a big part of the team.</h4>
+					</div>
+					<div id="message"></div>
+					<div class="cbp-mc-column">
+						<label for="first_name">First Name<span class="required" id="first_name">*</span></label>
+	  					<input type="text" name="first_name" placeholder="Sansa" onblur="check_empty('first_name');">
+	  					<label for="last_name">Last Name<span class="required" id="last_name">*</span></label>
+	  					<input type="text"  name="last_name" placeholder="Stark" onblur="check_empty('last_name');">
+	  					<label for="phone">Phone Number<span class="required" id="phone">*</span></label>
+	  					<input type="text"  name="phone" placeholder="9998889988" onblur="check_phone();">
+	  									
+	  					<label for="Ques1">How do you think will/shall AAW shape your social life?<span class="required" id="q1">*</span></label><textarea  name="q1" onblur="check_empty('q1');"></textarea>  	
+                        <label for="school_college">School/College<span class="required" id="org">*</span></label>
+	  				    <input type="text"  name="org" placeholder="Lady Sri Ram College" onblur="check_empty('org');">
+					
+	  					<label>Applying for the post of Associate Member as: <span class="required"> * </span>
+                        (You can apply for more than one)</label>
+	  					<div class="ac-custom ac-checkbox ac-checkmark">
+	  						<ul>
+						<li><input id="art" name="post[]" value="Artist" onchange="questions();" type="checkbox"><label for="art">Artist</label></li>
+						<li><input id="mang" name="post[]" value="M&M" onchange="questions();" type="checkbox"><label for="mang">Management & Marketing</label></li>
+						
+						    <ul>
+                        </div>
+                        
+	  					</div>
+	  				<div class="cbp-mc-column">
+	  					<label for="email">Email Address<span class="required" id="email">*</span></label>
+	  					<input type="text" name="email" placeholder="stark@got.com" onblur="check_empty('email');">
+	  					<label for="country">Country<span class="required" id="country">*</span></label>
+	  					<select  name="country">
+	  						<option value="">Choose your country</option>
+	  						<option value="India">India</option>
+	                        <option value="USA">USA</option>
+	                        <option value="United Kingdom">United Kingdom</option>
+	                        <option value="China(Hong Kong)">China(Hong Kong)</option>
+	                        <option value="Singapore">Singapore</option>
+	  					</select>
+	  					<label>City<span class="required" id="city">*</span></label>
+	  					<select  name="city">
+	  						<option value="">Choose your city</option>
+	  						<option value="Delhi">Delhi</option>
+	                        <option value="Mumbai">Mumbai</option>
+	                        <option value="Kolkata">Kolkata</option>
+	                        <option value="Chennai">Chennai</option>
+	                        <option value="Bengaluru">Bengaluru</option>
+	                        <option value="Jaipur">Jaipur</option>
+	                        <option value="Pune">Pune</option>
+	                        <option value="Others">Others</option>
+	  					</select>  
+	  					<label>Gender:</label>
+	  				<div class="ac-custom ac-radio ac-fill">
+					<ul>
+						<li><input id="male" name="gender" type="radio" value="Male"><label for="male">Male</label></li>
+						<li><input id="female" name="gender" type="radio" value="Female"><label for="female">Female</label></li>				
+					</ul>
+			        </div>
+			        
+    	
+                    <div id="ques"></div>
+                        
+			
+						
+	  				</div>
+	  				<!--div class="cbp-mc-column">
+	  					
+	  				</div-->
+	  				<div class="cbp-mc-submit-wrap"><input id="submit" class="cbp-mc-submit" type="button" value="Submit"/></div>
+				</form>
+			</div>
+		</div>
+		<script src="../js/svgcheckbx.js"></script>
+	</body>
+</html>

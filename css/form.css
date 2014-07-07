@@ -81,9 +81,9 @@ body .container{
     text-align: center;
 } 
 .aawist{
-		transition:-webkit-transform 1s ease-in;
-		
+		transition:-webkit-transform 1s ease-in;		
 		-webkit-transform:translateY(-20%);
+		
 }
 
 .cbp-mc-form {

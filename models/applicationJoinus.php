@@ -21,10 +21,11 @@ class Application extends Validate{
     protected $is_answered;
 
     function __construct(){
-    	$firstName=$lastName=$email=$phone=$org=$country=$city=$gender=null;
-    	$post=$answers=array();
-        $is_email=$is_phone=$is_novalue=0;
-        $is_answered=array();
+    	$this->firstName=$this->lastName=$this->email=$this->phone=$this->org=$this->country=$this->city=$this->gender=null;
+    	$this->post=array();
+        $this->answers=array();
+        $this->is_email=$this->is_phone=$this->is_novalue=0;
+        $this->is_answered=array();
     }
      
     public function inspect(){
@@ -73,28 +74,40 @@ class Application extends Validate{
             $PDO=new Dbconnect();
             $objPDO=$PDO->connect();
             
-            $query="INSERT INTO `applications`(`name`, `sex`, `institute`,`country`, `city`, `contact`, `email`, `post`, `Q1`, `Q2`, `Q3`, `Q4`, `Q5`, `Q6`) VALUES (:name,:gender,:org,:country,:city,:phone,:email,:post,:ans1,:ans2,:ans3,:ans4,:ans5);";
-            $statement=$objPDO->prepare($query);
-            
-            $statement->bindParam(':name',$this->firstName.' '.$this->lastName,PDO::PARAM_STR);
+            $query="INSERT INTO AAW_applications(name,sex,organization,country,city,phone,email,post,Q1,Q2,Q3,Q4,Q5) VALUES (:name,:gender,:org,:country,:city,:phone,:email,:post,:ans1,:ans2,:ans3,:ans4,:ans5);";
+            $statement=$objPDO->prepare($query);            
+
+            $name=$this->firstName.' '.$this->lastName;
+
+            $statement->bindParam(':name',$name,PDO::PARAM_STR);
             $statement->bindParam(':gender',$this->gender,PDO::PARAM_STR);
             $statement->bindParam(':org',$this->org,PDO::PARAM_STR);
             $statement->bindParam(':country',$this->country,PDO::PARAM_STR);
             $statement->bindParam(':city',$this->city,PDO::PARAM_STR);
             $statement->bindParam(':phone',$this->phone,PDO::PARAM_STR);
             $statement->bindParam(':email',$this->email,PDO::PARAM_STR);
-            $statement->bindParam(':post',implode(',',$this->post),PDO::PARAM_STR);
+            
+            $allPost=implode(',',$this->post);//for error on strict standards:only variables should be passed by reference
+            $statement->bindParam(':post',$allPost,PDO::PARAM_STR);
+         
+            $noAnswers = array('q1','q2','q3','q4','q5');
+            for ($i=0; $i < 5; $i++) { 
+                if(!array_key_exists($noAnswers[$i], $this->answers))
+                   $this->answers[$noAnswers[$i]]="Not Applicable"; 
+             } 
+
             $statement->bindParam(':ans1',$this->answers['q1'],PDO::PARAM_STR);
             $statement->bindParam(':ans2',$this->answers['q2'],PDO::PARAM_STR);
             $statement->bindParam(':ans3',$this->answers['q3'],PDO::PARAM_STR);
             $statement->bindParam(':ans4',$this->answers['q4'],PDO::PARAM_STR);
             $statement->bindParam(':ans5',$this->answers['q5'],PDO::PARAM_STR);
-            
+    
+    
             $statement->execute();
             return 1;
             
         } catch (PDOException $e) {
-            return 0;
+            echo $e->getMessage();
         }
         
     }

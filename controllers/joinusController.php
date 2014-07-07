@@ -38,8 +38,10 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
       echo "Please enter a valid Mobile No.";
     else if(!$joinus->is_answered())
       echo "You missed out on some answer(s).";
+    else if(!$joinus->save())
+      echo "There was some problem. Sorry for inconvenience.";
     else
-      echo $joinus->save();
+      echo "1";
 
 }else
   echo "Not Authorized.";

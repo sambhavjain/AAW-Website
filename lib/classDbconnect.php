@@ -10,19 +10,29 @@ class DbConnect{
 	private $dbDSN;
 
 	public function __construct(){
-		$db="mysql";
-		$host="localhost";
-		$user="aawprod_admin";
-		$password="admin";
-		$dbname='aawprod_test';
+		$this->db="mysql";
+		$this->host="localhost";
+		$this->user="root";
+		$this->password="root";
+		$this->dbname='test';
 		
-		$dbDSN="$db:dbname=$dbname;host=$host;user=$user;password=$password;";
+		$this->dbDSN="$this->db:host=$this->host;dbname=$this->dbname";
+
 	}
 
-	public function connect(){
+    public function connect(){
 
-		$objPDO = new PDO($dbDSN, NULL, NULL, array(PDO::ATTR_PERSISTENT => true));
-		return $objPDO; 
+			try {
+				
+				$objPDO = new PDO($this->dbDSN, $this->user, $this->password, array(PDO::ATTR_PERSISTENT => true));
+		        return $objPDO;
+				
+			} catch (PDOException $e) {
+				$e->getMessage();
+			}
 	}
 
 }
+
+
+?>
