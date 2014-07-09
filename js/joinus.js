@@ -50,6 +50,26 @@ function check_phone(){
   
 }
 
+function getCountry(){
+  
+  if(document.getElementsByName("country")[0].value=="Others"){
+     $('#otherCountry').html('<input type="text" name="country" placeholder="Type your country"/>');   
+   }else{
+    $('#otherCountry').html('');
+   }   
+  
+}
+
+function getCity(){
+  
+  if(document.getElementsByName("city")[0].value=="Others"){
+     $('#otherCity').html('<input type="text" name="city" placeholder="Type your city"/>');   
+   }else{
+    $('#otherCity').html('');
+   }   
+  
+}
+
 
 function questions(){
  

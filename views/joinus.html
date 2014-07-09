@@ -22,12 +22,12 @@
 </div>
 <ul id="menu">
 	
-	<li><a href="index.html#Home">Home</a></li><br>
-	<li><a href="index.html#About">About</a></li><br>
-	<li><a href="index.html#WhatWeDo">What We Do</a></li><br>
-	<li><a href="index.html#Initiatives">Our Projects and Work</a></li><br>
-	<li><a href="index.html#Team">Our Team</a></li><br>
-	<li><a href="index.html#Contact">Contact</a></li><br>
+	<li><a href="/#Home">Home</a></li><br>
+	<li><a href="/#About">About</a></li><br>
+	<li><a href="/#WhatWeDo">What We Do</a></li><br>
+	<li><a href="/#Initiatives">Our Projects and Work</a></li><br>
+	<li><a href="/#Team">Our Team</a></li><br>
+	<li><a href="/#Contact">Contact</a></li><br>
 	<br><br>
 	<img class="social-icon" src="../img/twitter.png"/>
 	<img class="social-icon" src="../img/facebook.png"/>
@@ -75,16 +75,18 @@
 	  					<label for="email">Email Address<span class="required" id="email">*</span></label>
 	  					<input type="text" name="email" placeholder="stark@got.com" onblur="check_empty('email');">
 	  					<label for="country">Country<span class="required" id="country">*</span></label>
-	  					<select  name="country">
+	  					<select  name="country" onchange="getCountry();">
 	  						<option value="">Choose your country</option>
 	  						<option value="India">India</option>
 	                        <option value="USA">USA</option>
 	                        <option value="United Kingdom">United Kingdom</option>
 	                        <option value="China(Hong Kong)">China(Hong Kong)</option>
 	                        <option value="Singapore">Singapore</option>
+	                        <option value="Others">Others</option>
 	  					</select>
+	  					<div id="otherCountry"></div>  
 	  					<label>City<span class="required" id="city">*</span></label>
-	  					<select  name="city">
+	  					<select  name="city" onchange="getCity();">
 	  						<option value="">Choose your city</option>
 	  						<option value="Delhi">Delhi</option>
 	                        <option value="Mumbai">Mumbai</option>
@@ -94,7 +96,8 @@
 	                        <option value="Jaipur">Jaipur</option>
 	                        <option value="Pune">Pune</option>
 	                        <option value="Others">Others</option>
-	  					</select>  
+	  					</select>
+	  					<div id="otherCity"></div>  
 	  					<label>Gender:</label>
 	  				<div class="ac-custom ac-radio ac-fill">
 					<ul>
