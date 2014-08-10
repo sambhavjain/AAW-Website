@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="./bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    body{
+      background-color: black;
+    }
+    /*.ifb-face:hover{
+      -webkit-transform: rotateY(180deg);
+    }
+
+    .ifb-face:hover .content{
+      display: none;
+    }
+
+    .content1{
+      display: none;
+      color: black;
+    }
+
+    .ifb-face:hover .content .content1{
+      display: block;
+      color: black;
+    }*/
+ /*Interactive Banner*/
+/*Common CSS*/
+/* ======== Just Icon CSS =========== */
+
+.flip-box-wrap {
+  display: block;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.flip-box-wrap .ifb-flip-box {
+  height: 100%;
+  width: 100%;
+}
+.flip-box-wrap .ifb-front,
+.flip-box-wrap .ifb-back {
+  padding: 15px 15px;
+  height: 100%;
+width: 100%;
+  margin-bottom: 0;
+  -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 400ms;
+  -moz-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms;
+}
+.flip-box-wrap .ifb-front {
+  z-index: 9;
+  backface-visibility: hidden;
+}
+.flip-box-wrap .ifb-back {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*Horizontal Flip effect*/
+/*Left Flip*/
+.flip-box-wrap .horizontal_flip_left .ifb-front {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.flip-box-wrap .horizontal_flip_left .ifb-back {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.flip-box-wrap:hover .horizontal_flip_left .ifb-back {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.flip-box-wrap:hover .horizontal_flip_left .ifb-front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/*.flip-box-wrap:hover .horizontal_flip_left .ifb-back {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.flip-box-wrap:hover .horizontal_flip_left .ifb-front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/*Right Flip*/
+.flip-box-wrap .horizontal_flip_right .ifb-front {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.flip-box-wrap .horizontal_flip_right .ifb-back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.flip-box-wrap:hover .horizontal_flip_right .ifb-back {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.flip-box-wrap:hover .horizontal_flip_right .ifb-front {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.wwd-box{
+  color:rgb(204, 221, 255); 
+  background:white;
+  height: 100%;
+  width: 100%;
+}
+
+
+.wwd-more-but{
+  background:rgb(204, 221, 255); 
+  color:white;
+}
+
+.icon{
+  font-size: 3.2em;
+}
+
+.icon-back{
+  background: white;
+ color: rgb(204, 221, 255);
+  border-radius: 50%;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="flip-box-wrap">
+
+        <div class="flip-box horizontal_flip_left flip-box-custom-height" >
+        
+        <div class="ifb-flip-box">
+        
+        <div class="ifb-face ifb-front wwd-box">
+          <div >
+            <div class="">
+          <div class="">
+          <div class="glyphicon glyphicon-headphones icon"></div></div></div></div>
+        <h3>Communications</h3>
+      
+</div>
+
+
+
+
+            <div class="ifb-face ifb-back wwd-box" ><p><br>
+Consultation | PR | Copywriting</p><div class="row"><div class="col-md-4 col-md-offset-4"><div class="wwd-more-but "><a href="#"  > more</a></div>
+</div>
+</div></div>
+</div>
+
+ </div>
+
+</div>
+    
+    </div>
+
+
+ <div class="col-md-4">
+      <div class="flip-box-wrap">
+
+        <div class="flip-box horizontal_flip_left flip-box-custom-height" >
+        
+        <div class="ifb-flip-box">
+        
+        <div class="ifb-face ifb-front wwd-box">
+          <div >
+            <div class="">
+          <div class="">
+          <div class="glyphicon glyphicon-headphones icon"></div></div></div></div>
+        <h3>Communications</h3>
+      
+</div>
+
+
+
+
+            <div class="ifb-face ifb-back wwd-box" ><p><br>
+Consultation | PR | Copywriting</p><div class="row"><div class="col-md-4 col-md-offset-4"><div class="wwd-more-but "><a href="#"  > more</a></div>
+</div>
+</div></div>
+</div>
+
+ </div>
+
+</div>
+    
+    </div>
+
+
+     <div class="col-md-4">
+      <div class="flip-box-wrap">
+
+        <div class="flip-box horizontal_flip_left flip-box-custom-height" >
+        
+        <div class="ifb-flip-box">
+        
+        <div class="ifb-face ifb-front wwd-box">
+          <div >
+            <div class="">
+          <div class="">
+          <div class="glyphicon glyphicon-headphones icon"></div></div></div></div>
+        <h3>Communications</h3>
+      
+</div>
+
+
+
+
+            <div class="ifb-face ifb-back wwd-box" ><p><br>
+Consultation | PR | Copywriting</p><div class="row"><div class="col-md-4 col-md-offset-4"><div class="wwd-more-but "><a href="#"  > more</a></div>
+</div>
+</div></div>
+</div>
+
+ </div>
+
+</div>
+    
+    </div>
+
+
+
+
+  </div>
+
+   <div class="row">
+    <div class="col-md-4">
+      <div class="flip-box-wrap">
+
+        <div class="flip-box horizontal_flip_left flip-box-custom-height" >
+        
+        <div class="ifb-flip-box">
+        
+        <div class="ifb-face ifb-front wwd-box">
+          <div >
+            <div class="">
+          <div class="">
+          <div class="glyphicon glyphicon-headphones icon"></div></div></div></div>
+        <h3>Communications</h3>
+      
+</div>
+
+
+
+
+            <div class="ifb-face ifb-back wwd-box" ><p><br>
+Consultation | PR | Copywriting</p><div class="row"><div class="col-md-4 col-md-offset-4"><div class="wwd-more-but "><a href="#"  > more</a></div>
+</div>
+</div></div>
+</div>
+
+ </div>
+
+</div>
+    
+    </div>
+
+
+ <div class="col-md-4">
+      <div class="flip-box-wrap">
+
+        <div class="flip-box horizontal_flip_left flip-box-custom-height" >
+        
+        <div class="ifb-flip-box">
+        
+        <div class="ifb-face ifb-front wwd-box">
+          <div >
+            <div class="">
+          <div class="">
+          <div class="glyphicon glyphicon-headphones icon"></div></div></div></div>
+        <h3>Communications</h3>
+      
+</div>
+
+
+
+
+            <div class="ifb-face ifb-back wwd-box" ><p><br>
+Consultation | PR | Copywriting</p><div class="row"><div class="col-md-4 col-md-offset-4"><div class="wwd-more-but "><a href="#"  > more</a></div>
+</div>
+</div></div>
+</div>
+
+ </div>
+
+</div>
+    
+    </div>
+
+
+     <div class="col-md-4">
+      <div class="flip-box-wrap">
+
+        <div class="flip-box horizontal_flip_left flip-box-custom-height" >
+        
+        <div class="ifb-flip-box">
+        
+        <div class="ifb-face ifb-front wwd-box">
+          <div >
+            <div class="">
+          <div class="">
+          <div class="glyphicon glyphicon-headphones icon"></div></div></div></div>
+        <h3>Communications</h3>
+      
+</div>
+
+
+
+
+            <div class="ifb-face ifb-back wwd-box" ><p><br>
+Consultation | PR | Copywriting</p><div class="row"><div class="col-md-4 col-md-offset-4"><div class="wwd-more-but "><a href="#"  > more</a></div>
+</div>
+</div></div>
+</div>
+
+ </div>
+
+</div>
+    
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./bootstrap.min.js"></script>
+  </body>
+</html>

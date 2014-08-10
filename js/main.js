@@ -3,8 +3,8 @@ $(document).ready(function(){
                                 verticalCentered: true,
                                 'scrollOverflow': true,
                                 continuousVertical: true,
-                                slidesColor: ['#000000', '#000000', '#ccddff', 'whitesmoke','#ccddff', 'whitesmoke'],
-                                anchors: ['Home', 'About', 'WhatWeDo', 'Initiatives','Team', 'Contact'],
+                                slidesColor: ['#000000', '#000000', '#ccddff', 'whitesmoke','whitesmoke'],
+                                anchors: ['Home', 'About', 'WhatWeDo', 'Initiatives', 'Contact'],
                                 menu: '#menu',
                                 afterRender: function(){
                                 
@@ -24,6 +24,18 @@ $(document).ready(function(){
         		$('#header .side-menu').css({'right':'20px'});
         		$('#menu').css({'right':'-25%'});
         		flag=0;
+            }
+        
+        });
+        var mobflag=0;
+        $('.side-menu-mob').click(function(){
+            if(mobflag==0){
+                $('#menu').css({'top':'0'});
+                mobflag=1;
+            }else
+            {
+                $('#menu').css({'top':'-200%'});
+                mobflag=0;
             }
         
         });

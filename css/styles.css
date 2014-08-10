@@ -79,7 +79,7 @@ p{
 Side Menu**********************/
 
 #menu li {
-	display:inline-block;
+	display:block;
 	margin: 0px;
 	color: #000;
 	 
@@ -165,7 +165,7 @@ Side Menu**********************/
         top: 0px;
         padding:10px 0 10px 0;
     }
-    
+    #header .side-menu-mob{display: none;}
     #header .side-menu{
     	position: absolute;
     	height:20px;
@@ -175,7 +175,6 @@ Side Menu**********************/
     	display:block;
     	right: 20px;
     	opacity: 1;
-    	right:20px;
     	transition:right 1s,opacity 0.3s;
     }
 
@@ -253,6 +252,10 @@ Side Menu**********************/
 	    }
 
         /*WHAT WE DO*/
+    #section2{
+        background-image: url(../img/textured_paper.png);
+        padding: 6% 0 0 0;
+    }
         .flip {
   -webkit-perspective: 800;
   -moz-perspective: 800;
@@ -283,26 +286,35 @@ Side Menu**********************/
   -moz-backface-visibility: hidden ;
   z-index: 2;
     font-family: 'National Light',Helvetica;
-    font-size: 3em;
+    
     text-align: center;
-    line-height: 200px;
 }
 .flip .card .front {
   position: absolute;
   z-index: 1;
-    background: black;
-    color: white;
- 
+    background: white;
+    color: black;
+    font-size: 2.5em;
+ line-height: 30px;
+ font-family: chiller,AR CHRISTY;
+ font-style: bold;
 }
 .flip .card .back {
   -webkit-transform: rotatex(-180deg);
   -moz-transform: rotatex(-180deg);
     background: blue;
-    background: white;
-    color: black;
+    background: black;
+    color: white;
+    font-size: 1em;
+    line-height: 20px;
 }
+.desc{padding:5%;}
 
         /*OUR PROJECTS*/
+        #section3{
+        background-image: url(../img/fabric_plaid.png);
+        padding: 6% 0 0 0;
+    }
         .project{
         	border: 2px solid gray;
             border-radius: 0;
@@ -356,6 +368,9 @@ Side Menu**********************/
         }
         
         /*CONTACT US*/
+        #section5{
+        background-image: url(../img/fabric_plaid.png);
+    }
 	    #section4 .contact h1{
 			text-align: center;
 		}

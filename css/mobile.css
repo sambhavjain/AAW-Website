@@ -1,3 +1,383 @@
-#header{
-	display: none;
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
 }
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;    
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+
+/* Custom CSS
+ * --------------------------------------- */
+body{
+	font-family: arial,helvetica;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+h1{
+	font-size: 6em;	
+}
+p{
+	font-size: 2em;
+}
+.intro p{
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+.section{
+	text-align:center;
+}
+.section h1{margin-top:40px;}
+
+/*****
+Side Menu**********************/
+
+#menu li {
+    display:inline-block;
+    margin: 0px;
+    color: #000;
+     
+}
+
+#menu li.active{
+    
+    color: #fff;
+}
+#menu li a{
+    text-decoration:none;
+    color: gray;
+    transition:color 0.3s;
+}
+#menu li.active a:hover{
+    color: #fff;
+}
+#menu li a:hover{
+    color: #fff;
+}
+#menu li:hover{
+    color:#fff;
+}
+#menu li a,
+#menu li.active a{
+    padding: 9px 18px;
+    display:block;
+}
+#menu li.active a{
+    color: #fff;
+}
+#menu .social-icon{
+    width:10%;
+    margin:2%;
+    opacity: 1;
+    display: inline-block;
+    transition:opacity 0.3s;
+    cursor: pointer;
+    opacity:0.5;
+}
+#menu .social-icon:hover{opacity: 1;}
+#menu .menu-logo{
+    height:30%;
+    width:70%;
+}
+#menu .menu-contact{
+  display: none;
+}
+#menu{
+    position:absolute;
+    z-index: 70;
+    width: 80%;
+    padding: 0;
+    display: block;
+    margin:0;
+    padding-top: 5%;
+    text-align: center;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 120%;
+    top:-200%;
+    transition:top 1s;
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+a{text-decoration: none;color:inherit;}
+    #header{
+        position:absolute;
+        display:block;
+        width: 100%;
+        background-color: rgba(255,255,255,0.1);
+        z-index:9;
+        color: black;
+        height: 40px;
+        line-height: 23px;
+        vertical-align: middle;
+        top: 0px;
+        padding:10px 0 10px 0;
+    }
+    
+    #header .side-menu{
+        display: none;
+    }
+    #header .side-menu-mob{
+        position: fixed;
+        height:20px;
+        width:35px;
+        cursor:pointer;
+        top:20px;
+        display:block;
+        right: 20px;
+        opacity: 1;
+        transition:opacity 0.3s;
+    }
+   
+
+    #header span{
+        display: none;    
+    }
+    #header span:hover{opacity: 0.5;}
+    
+/* Sections
+* ------------------------------------------------- */
+         /*HOME*/
+         .cb-slideshow li div p {display: none;}
+        .join-us{
+            border:1px solid white;
+            padding:1% 3% 1% 3%;
+            position: absolute;
+            bottom:10%;
+            left:40px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: none;
+            transition:background-color 0.3s;
+        }
+        .join-us p{color:rgb(255,255,255);}
+        .join-us:hover{background-color: rgba(255,255,255,0.3);}
+        .scroll{
+            position: absolute;
+            bottom:10%;
+            right:50px;
+            cursor: pointer;
+            background-color: none;
+            color:white;
+            width:10%;
+            text-align: center;
+            font-family: Segoe UI Light;
+        }
+        .scroll img{margin-bottom: -40px;}
+        /*VIDEO*/
+        #section1 .layer{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0%;
+        height: 80%;
+        color:white;
+        opacity:1;
+        background-color: transparent;
+        transition:opacity 2s;
+        }
+           
+        #section1 .layer p{color: rgb(255,255,255); font-size: 200%;font-style: italic;}
+        #section1 .layer #play 
+        {
+            position: absolute;
+            top:50%;
+            left:45%;
+            opacity: 0.7;
+            width: 10%;
+            cursor:pointer;
+        }
+
+        /*WHAT WE DO*/
+        .flip {
+  -webkit-perspective: 800;
+  -moz-perspective: 800;
+   width: 400px;
+   height: 200px;
+    position: relative;
+   display: inline-block;
+   margin: 1%;
+}
+.flip .card.flipped {
+  -webkit-transform: rotatex(-180deg);
+  -moz-transform: rotatex(-180deg);
+}
+.flip .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: 0.5s;
+
+}
+.flip .card .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden ;
+  -moz-backface-visibility: hidden ;
+  z-index: 2;
+    font-family: 'National Light',Helvetica;
+    font-size: 3em;
+    text-align: center;
+    line-height: 200px;
+}
+.flip .card .front {
+  position: absolute;
+  z-index: 1;
+    background: black;
+    color: white;
+ 
+}
+.flip .card .back {
+  -webkit-transform: rotatex(-180deg);
+  -moz-transform: rotatex(-180deg);
+    background: blue;
+    background: white;
+    color: black;
+}
+
+        /*OUR PROJECTS*/
+        .project{
+            border: 2px solid gray;
+            border-radius: 0;
+            color: gray;
+            display: inline-block;
+            font: 400 1em/1 "Open Sans",sans-serif;
+            margin: 0 0.5em .5em;
+            padding: 1em 1.5em;
+            width:10%;
+            transition:background-color,border,color 0.5s;
+        }
+        .project:hover{
+            color:white;
+            cursor: pointer;
+            background-color: #7BAABE;
+            border: 2px solid #7BAABE;
+        }
+        .events{
+            border: 2px solid gray;
+            border-radius: 0;
+            color: gray;
+            display: inline-block;
+            font: 400 1em/1 "Open Sans",sans-serif;
+            margin: 0 0.5em .5em;
+            padding: 1em 1.5em;
+            width:10%;
+            transition:background-color,border,color 0.5s;
+        }
+        .events:hover{
+            color:white;
+            cursor: pointer;
+            background-color: rgb(255,91,91);
+            border: 2px solid rgb(255,91,91);
+        }
+        .movies{
+            border: 2px solid gray;
+            border-radius: 0;
+            color: gray;
+            display: inline-block;
+            font: 400 1em/1 "Open Sans",sans-serif;
+            margin: 0 0.5em .5em;
+            padding: 1em 1.5em;
+            width:10%;
+            transition:background-color,border,color 0.5s;
+        }
+        .movies:hover{
+            color:white;
+            cursor: pointer;
+            background-color: rgb(106,255,106);
+            border: 2px solid rgb(106,255,106);
+        }
+        
+        /*CONTACT US*/
+        #section4 .contact h1{
+            text-align: center;
+        }
+        #section5 .contact p{
+            margin: 0 auto;
+            font-size: 1.5em;
+            text-align: left;
+            padding-left: 5%;
+        }
+        #section5 .contact form{
+            padding-left: 5%;
+            text-align: left;
+            
+        }
+        .contact input,textarea{
+            border: 2px solid #ddd;
+            border-radius: 0;
+            color: #999;
+            display: block;
+            background-color: rgba(255,255,255,0);
+            font: 400 1em/1 Helvetica,sans-serif;
+            font-style: italic;
+            margin: 0 0 .5em;
+            padding: 1em 1.25em;
+            width: 80%;
+            -webkit-transition: border-color 300ms,color 300ms;
+            -moz-transition: border-color 300ms,color 300ms;
+            transition: border-color 300ms,color 300ms;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+        .contact iframe{display: none;}
+        .contact .submit-btn{width:25%;font-style: normal;}
+        .contact .submit-btn:hover{
+            color:white;
+            cursor: pointer;
+            background-color: rgb(120,220,210);
+            border:2px solid rgb(120,220,210);
+            
+        }
+
+
+

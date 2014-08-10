@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>
+AAW - Join Us
+</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+   
+<style type="text/css">
+ body{
+		background-image: url(img/join.jpg);
+		background-size: cover;
+		
+	}
+
+.required,#wrong-number{
+ 	color: #FF0000;
+ }
+
+#error-disp{
+	font-size: 20px;
+	font-style: bold;
+	padding:10px;
+	color:red;
+	box-shadow: 0px 0px 10px gray;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+
+#heading{
+	width:100%;
+	background-color: rgba(135,211,231,0.3);
+	padding-top: 2%;
+	padding-left: 5%;
+	padding-bottom: 2%;
+	font-family: Aliquam UltraLight,dotum;
+ 	font-size: 30px;
+ 	margin-top: 0px;
+}
+
+#desc{
+	font-family: MuseoSans,Georgia,serif;
+	font-size: 15px;
+}
+
+</style>
+<!--Script-->
+ 
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="./bootstrap.min.js"></script> 
+<!--ALL RELATED FUNCTIONS in the following script-->
+<script src="./joinus.js"></script>
+<script>
+function result(){
+var formdata=$('#form').serialize();
+var answers=$('#answers').serialize();
+var dataString=formdata+'&'+answers;
+$.post('test_join.php',dataString,function(data){
+$('#error').html('<span id="error-disp">'+data+'</span>');
+});
+}
+</script>
+</head>
+
+<body>
+	<div id="heading">
+		<span style="float:left;">
+		 <a href="index.html">
+			<img src="FooterImages/AAWLogo2.png" width="100" height="100" >
+		 </a>
+		</span>
+
+		<br>
+Artist At Work Productions<br> Associate Member Programme
+  </div>
+  <div class="container">
+  <div class="row">
+  <div class="col-md-8">
+  	<div id="desc">
+  <p> Artist At Work Productions is, as the name suggests, a firm working in every field of Art:<br> GRAPHICH DESIGN - VIDEOGRAPHY - PHOTOGRAPHY - <br>MUSIC PRODUCTION - FINE ARTS - LITERARY ARTS, etc. </p>
+<p> For Artists, it's a platform to showcase and nurture their talents,<br> make some money and gain some valuable working experience. Working with a Start Up <br>Company is no less than owning it, making you a big part of the team. </p>
+<p> Also, no firm can survive without efficient Marketing & Management, in this cut-throat<br> scenario of the market. Hence, we need people who can manage resources and logistics<br> and help with advertising via Social Media, Campus Awareness, Corporate Offices,<br> Non-Profit Social Events, etc. </p>
+<p> Those interested are requested to fill up the following form. </p> 
+</div> 
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8">
+		
+<form id="form" method="POST">
+    Name <span class="required" id="name">*</span> <br>
+    <input type="text" name="name" onblur="check_field(this.form.name.value,'name')" > 
+<br> <br>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8">
+Gender <span class="required"> * </span> <br>
+<input type="radio" name="gender" value="male" checked> Male <br>
+<input type="radio" name="gender" value="female"> Female <br> <br>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8">
+School / College <span class="required" id="sc"> * </span> <br>
+<input type="text" name="sc" onblur="check_field(this.form.sc.value,'sc')" > <br> <br>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8">
+Country <span class="required"> * </span> <br>
+<select name="country">
+	<option value="India">India</option>
+	<option value="USA">USA</option>
+	<option value="United Kingdom">United Kingdom</option>
+	<option value="China(Hong Kong)">China(Hong Kong)</option>
+	<option value="Singapore">Singapore</option>
+</select>
+<br> <br>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8">
+City  <span class="required"> * </span> <br>
+<select name="city" onchange="otherCity(this.form.city.value)">
+	<option value="Delhi">Delhi</option>
+	<option value="Mumbai">Mumbai</option>
+	<option value="Kolkata">Kolkata</option>
+	<option value="Chennai">Chennai</option>
+	<option value="Bengaluru">Bengaluru</option>
+	<option value="Jaipur">Jaipur</option>
+	<option value="Pune">Pune</option>
+	<option value="Others">Others</option>
+</select>
+
+<span id="input-box">
+	<input type="text" name="other_city" placeholder="Type your city">
+</span>
+<br> <br>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8">
+Contact Number <span class="required" id="contact"> * </span><span id="wrong-number"></span> <br>
+<input type="text" name="contact" onblur="check_field(this.form.contact.value,'contact')" onchange="check_number(this.form.contact.value)"> <br> <br>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8">
+Email ID <span class="required" id="email"> * </span> <br>
+<input type="text" name="email" onblur="check_field(this.form.email.value,'email')" onchange="check_email()"> 
+<br> <br>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8">
+Applying for the post of Associate Member as: <span class="required"> * </span> <br>
+(You can apply for more than one) <br>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8">
+<input type="checkbox" name="post[]" id="art" value="artist" onchange="questions()"> Artist <br>
+<input type="checkbox" name="post[]" id="mang" value="m&m" onchange="questions()"> Management & Marketing <br>
+<input type="checkbox" name="post[]" id="oth" value="other" onchange="questions()"> Other(as Campus Ambassadors ,City Representatives etc.) 
+<input type="text" name="other"> <br> <br>
+</div>
+</div>
+</form>
+<div id="ques"></div>
+<b>
+	Don't forget to send your work (Portfolios, Samples, etc.) and CV at contact@aawproductions.com to complete the application.
+</b>
+<br><br><span id="error"></span><br><br>
+<input class="btn btn-success" type="submit" value="Submit" onClick="return false;" onmousedown="result()"/>
+<a href="#top"> <img src="http://www.flaticon.com/png/256/2629.png" alt="Go to the top" width="40" height="40"> </a>
+<br><br>
+</div>
+</div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51730320-1', 'aawproductions.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
