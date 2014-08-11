@@ -228,7 +228,7 @@ Side Menu**********************/
         }
         .scroll img{margin-bottom: -40px;}
         /*VIDEO*/
-		#section1 .layer{
+        #section1 .layer{
 		position: absolute;
 		width: 100%;
 		left: 0;
@@ -253,9 +253,13 @@ Side Menu**********************/
 
         /*WHAT WE DO*/
     #section2{
-        background-image: url(../img/textured_paper.png);
+        background-image: url(../img/fabric_plaid.png);
         padding: 6% 0 0 0;
     }
+    #card1{background-color: rgb(255,244,43);}
+    #card3{background-color: rgb(98,251,60);}
+    #card5{background-color: rgb(65,226,206);}
+
         .flip {
   -webkit-perspective: 800;
   -moz-perspective: 800;
@@ -312,13 +316,19 @@ Side Menu**********************/
 
         /*OUR PROJECTS*/
         #section3{
-        background-image: url(../img/fabric_plaid.png);
+        background-image: url(../img/15.jpg);
         padding: 6% 0 0 0;
+        background-repeat: no-repeat;
+        
+        background-size: cover;
+        color: rgb(215,215,215);
     }
+    #section3 h1{color: white;}
+    #section3 .layer{background-color: rgba(0,0,0,0.3);}
         .project{
-        	border: 2px solid gray;
+        	border: 2px solid white;
             border-radius: 0;
-            color: gray;
+            color: rgb(215,215,215);
             display: inline-block;
             font: 400 1em/1 "Open Sans",sans-serif;
             margin: 0 0.5em .5em;
@@ -332,10 +342,12 @@ Side Menu**********************/
             background-color: #7BAABE;
         	border: 2px solid #7BAABE;
         }
+        .project:before{content: 'Projects';}
+        .project:hover:after{content: ' Coming Soon';}
         .events{
-            border: 2px solid gray;
+            border: 2px solid white;
             border-radius: 0;
-            color: gray;
+            color: rgb(215,215,215);
             display: inline-block;
             font: 400 1em/1 "Open Sans",sans-serif;
             margin: 0 0.5em .5em;
@@ -349,10 +361,12 @@ Side Menu**********************/
             background-color: rgb(255,91,91);
             border: 2px solid rgb(255,91,91);
         }
+        .events:before{content: 'Events';}
+        .events:hover:after{content: ' Coming Soon';}
         .movies{
-            border: 2px solid gray;
+            border: 2px solid white;
             border-radius: 0;
-            color: gray;
+            color: rgb(215,215,215);
             display: inline-block;
             font: 400 1em/1 "Open Sans",sans-serif;
             margin: 0 0.5em .5em;
