@@ -3,7 +3,7 @@ $(document).ready(function(){
                                 verticalCentered: true,
                                 'scrollOverflow': true,
                                 continuousVertical: true,
-                                slidesColor: ['#000000', '#000000', '#ccddff', 'whitesmoke','whitesmoke'],
+                                slidesColor: ['#000000', '#000000', 'whitesmoke', 'whitesmoke','whitesmoke'],
                                 anchors: ['Home', 'About', 'WhatWeDo', 'Initiatives', 'Contact'],
                                 menu: '#menu',
                                 afterRender: function(){

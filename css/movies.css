@@ -22,7 +22,7 @@ a:link
     }
     .heading{
       color:black;
-      font-family: Calibri;
+      font-family: Segoe UI Light,Calibri;
       text-align: center;
       font-size: 500%;
       width: 100%;
@@ -30,7 +30,7 @@ a:link
 
     .panel-title{
       font-size: 200%;
-      font-family: Calibri;
+      font-family: Segoe UI Light,Calibri;
     }
     .home{
       position: fixed;

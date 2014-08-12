@@ -380,6 +380,23 @@ Side Menu**********************/
             background-color: rgb(106,255,106);
             border: 2px solid rgb(106,255,106);
         }
+        .media{
+            border: 2px solid white;
+            border-radius: 0;
+            color: rgb(215,215,215);
+            display: inline-block;
+            font: 400 1em/1 "Open Sans",sans-serif;
+            margin: 0 0.5em .5em;
+            padding: 1em 1.5em;
+            width:10%;
+            transition:background-color,border,color 0.5s;
+        }
+        .media:hover{
+            color:white;
+            cursor: pointer;
+            background-color: rgb(192,136,210);
+            border: 2px solid rgb(192,136,210);
+        }
         
         /*CONTACT US*/
         #section5{
